@@ -1,9 +1,14 @@
+// commponents
+import Header from "./sections/Header";
+import Hero from "./sections/Hero";
 
-
-export default function Home() {
+const Home = () => {
   return (
-      <>
-        
-      </>
+    <div>
+      <Header />
+      <Hero />
+    </div>
   );
-}
+};
+
+export default Home;
