@@ -127,6 +127,45 @@ html{
   scroll-behavior: smooth;
 }
 
+.collect {
+  padding-left: 30px;
+  padding-right: 30px;
+    margin: 0 auto;
+}
+
+@media(max-width:767px){
+    .collect{
+        width: 100%;
+    }
+}
+@media(min-width:768px){
+    .collect{
+        width: 750px;
+        
+    }
+}
+@media(min-width:992px){
+    .collect{
+        width: 940px;
+    }
+}
+@media(min-width:1200px){
+    .collect{
+        width: 1150px;
+    }
+}
+@media(min-width:1600px){
+    .collect{
+        width: 1400px;
+    }
+}
+
+
+
+
+
+
+
 .on{
   color: #ffd76e;
 }

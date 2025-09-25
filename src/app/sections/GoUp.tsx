@@ -7,14 +7,18 @@ import { useEffect } from "react"
 const GoUp = () => {
 
     useEffect(()=>{
-        window.addEventListener("scroll",()=>{
+        const goUp = ()=>{
             const el = document.querySelector(".arow") as HTMLElement
             if(window.scrollY > 500){
                 el.classList.add("right-4")
             }else{
                 el.classList.remove("right-4")
             }
-        })
+        }
+        window.addEventListener("scroll",goUp)
+        return ()=>{
+            window.removeEventListener("scroll", goUp)
+        }
     },[])
 
 

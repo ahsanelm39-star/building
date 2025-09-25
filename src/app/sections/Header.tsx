@@ -5,9 +5,9 @@ import {faYoutube, faFacebookF, faXTwitter, faInstagram} from "@fortawesome/free
 
 const Header = () => {
   return (
-    <header>
+    <header className="sticky top-0 z-20">
         <div className="bg-linear-to-t from-[#ffc221] to-[#ffd76e]">
-          <div className="container mx-auto flex justify-between items-center py-2 px-4 max-md:justify-center ">
+          <div className="collect flex justify-between items-center py-2 max-md:justify-center ">
             <div className="flex gap-10 max-md:gap-6 items-center text-sm text-primary">
               <div className="flex gap-2">
                 <FontAwesomeIcon icon={faPhone} className="w-7 text-white bg-black p-2 " />
@@ -28,9 +28,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="  sticky z-10 w-1/1 top-0">
           <Nave/>
-        </div>
     </header>
   )
 }
