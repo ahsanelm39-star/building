@@ -17,7 +17,7 @@ const List = () => {
       
       function Menuo (){
           return(
-            <div className={` md:hidden fixed bg-[#0000005d] w-1/1 h-[100vh] top-0 right-0 flex justify-end translate-x-1/1 opacity-0 transition-all ${showMenu ? "menuo":""}`}> 
+            <div className={` md:hidden fixed bg-[#0000005d] w-1/1 h-[100vh] top-0 right-0 flex justify-end translate-x-1/1 opacity-0 transition-all ${showMenu ? "menuo":""} z-50`}> 
               <div className='bg-black h-[100vh] w-[250px] flex flex-col justify-evenly px-8'>
                 <span onClick={()=>{
                   setShowMenu(false)

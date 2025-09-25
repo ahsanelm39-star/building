@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Logo from '../../../public/images/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import  List  from './List';
+import Btn from './Btn';
 
 const Nave = () => {
     return (
@@ -19,12 +18,7 @@ const Nave = () => {
                         <li className=' relative font-medium p-2 cursor-pointer before:con text-sm after:content-["/"] after:text-[#ffd76e] after:absolute after:-right-3 mr-4 hover:text-[#ffd76e] transition-all'>PROJECTS</li>
                         <li className=' relative font-medium p-2 cursor-pointer before:con text-sm after:content-["/"] after:text-[#ffd76e] after:absolute after:-right-3 mr-4 hover:text-[#ffd76e] transition-all'>CONTACT</li>
                     </ul>
-                    <div className='get-box bg-white px-3 py-1 font-medium flex gap-4 items-center cursor-pointer max-lg:hidden'>
-                        <span className='text-black font-bold text-sm tracking-tight'>GET A QUOTE</span>
-                        <div className='bg-black text-white px-2 py-1'>
-                            <FontAwesomeIcon icon={faArrowRight} className='icon text-sm -rotate-40 transition-all'/>
-                        </div>
-                    </div>
+                    <Btn bg={'white'} text={"GET A QUOTE"}/>
                 </div>
                 <List/>
             </div>

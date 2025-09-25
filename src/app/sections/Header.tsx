@@ -28,7 +28,9 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <Nave/>
+        <div className="  sticky z-10 w-1/1 top-0">
+          <Nave/>
+        </div>
     </header>
   )
 }
