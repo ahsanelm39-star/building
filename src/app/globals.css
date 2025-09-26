@@ -202,8 +202,12 @@ html{
   background-color: black;
   color: white;
 }
+.ul-ser{
+  list-style: none;
+}
 .ul-ser li{
   position: relative;
+  padding-left: 20px;
 }
 .ul-ser li::before{
   content: "";
