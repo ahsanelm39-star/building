@@ -5,7 +5,7 @@ import Btn from './Btn';
 
 const Nave = () => {
     return (
-        <nav className='bg-black '>
+        <nav className='bg-primary '>
             <div className="collect  flex justify-between items-center py-3">
                 <div>
                     <Image src={Logo} alt="Logo"  height={48} width={230} className='max-md:w-50 mr-8'/>

@@ -38,7 +38,7 @@ const States = () => {
     }, [])
 
     return (
-        <div className="bg-black py-10 section">
+        <div className="bg-primary py-10 section">
             <div className="collect flex justify-between text-white gap-18 max-md:gap-10 flex-wrap">
                 <div className="text-center">
                     <div className="text-4xl font-bold inline" data-set='99'>0</div><span className="text-4xl font-bold inline">%</span>

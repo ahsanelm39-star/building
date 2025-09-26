@@ -128,8 +128,8 @@ html{
 }
 
 .collect {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
     margin: 0 auto;
 }
 
@@ -170,6 +170,13 @@ html{
   color: #ffd76e;
 }
 .get-box:hover .icon{
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+}
+.card:hover .icon{
   transform: rotate(40deg);
   -webkit-transform: rotate(40deg);
   -moz-transform: rotate(40deg);
@@ -217,4 +224,91 @@ html{
   background-color: #ffd76e;
   top: 10px;
   left: -0px;
+}
+
+.work-section{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+}
+.work-section div:hover .card{
+  bottom: 30px;
+}
+
+/* @media (max-width:768px){
+    .work-section div .card{
+    bottom: 30px;
+  }
+} */
+
+.p{
+  line-height: 1.8;
+}
+
+
+@media (max-width:500px){
+  .left-arrow{
+    left: -30px;
+  }
+  .right-arrow{
+    right: -30px;
+  }
+}
+@media (max-width:460px){
+  .left-arrow{
+    background-color: #ffc221;
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    top: 120%;
+    left: 50%;
+    transform: translatex(-100%);
+    -webkit-transform: translatex(-100%);
+    -moz-transform: translatex(-100%);
+    -ms-transform: translatex(-100%);
+    -o-transform: translatex(-100%);
+}
+  .right-arrow{
+    background-color: #ffc221;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+    top: 120%;
+    right: 50%;
+    transform: translatex(110%);
+    -webkit-transform: translatex(110%);
+    -moz-transform: translatex(110%);
+    -ms-transform: translatex(110%);
+    -o-transform: translatex(110%);
+}
+}
+
+.clicked{
+  color: red;
+}
+.clicked svg:last-child{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.content{
+  padding-bottom: 60px;
+  position: relative;
+}
+.content::after{
+  content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores minima.";
+  position: absolute;
+  color: rgba(0, 0, 0, 0.637);
+  font-size: 15px;
+  line-height: 1.7;
+  bottom: 20px;
 }
