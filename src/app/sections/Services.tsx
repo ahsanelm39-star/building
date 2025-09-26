@@ -1,7 +1,142 @@
+"use client"
+import { faIgloo, faPaintRoller, faUserGear, faWrench } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useEffect, useState } from "react"
+import Image from "next/image"
+import Img_1 from '../../../public/images/img/services/thumb-1.jpg'
+import Img_2 from '../../../public/images/img/services/thumb-2.jpg'
+import Img_3 from '../../../public/images/img/services/thumb-3.jpg'
+import Img_4 from '../../../public/images/img/services/thumb-4.jpg'
+import Img_5 from '../../../public/images/img/services/thumb-5.jpg'
+import Img_6 from '../../../public/images/img/services/thumb-6.jpg'
+import Btn from "./Btn"
+import SpecialHead from "./SpecialHead"
+
 
 const Services = () => {
+    const [clickedBtn, setClickedBtn] = useState(0)
+
+
+useEffect(()=>{
+        const btn = document.querySelectorAll('.btn-groub div') as NodeListOf<HTMLElement>;
+        btn.forEach((button,index) => {
+            button.addEventListener('click', () => {
+                const ele = button.firstElementChild
+                btn.forEach((btn) => {
+                    if (btn.firstElementChild) {
+                        btn.firstElementChild.classList.remove('active');
+                    }
+                });
+                ele?.classList.add('active');
+                setClickedBtn(index);
+            })
+        })
+        return ()=>{
+            btn.forEach((button) => {
+                button.removeEventListener('click', () => {}); 
+            });
+        }
+},[])
+
+
+const data = [
+    {
+        url1: Img_1,
+        url2: Img_2,
+        title: 'Construction Services',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        list1:["Residentail builds","Site Prep","Framing & Roofing"],
+        list2:["Structural Design","Concrete Work","Interior Finishing"]
+    },
+    {
+        url1: Img_3,
+        url2: Img_4,
+        title: 'Renovation Services',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        list1:["Kitchen Remodel","Flooring","Carpentry"],
+        list2:["Basement Finish","Energy Upgrades","Painting"]
+    },
+    {
+        url1: Img_5,
+        url2: Img_6,
+        title: 'Restoration Services',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        list1:["Historic Restore","Fire Repair","mold Removal"],
+        list2:["Water damage","structural Fix","Roof Store"]
+    },
+    {
+        url1: Img_1,
+        url2: Img_3,
+        title: 'Consulting Services',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        list1:["Project plans","Site Management","Sustainability"],
+        list2:["Costing","Permits","safety"]
+    }
+]
+
+const dataList = data.map((item, index) => {
+    console.log(item.url1);
+    if(index === clickedBtn){
+        return (
+            <div key={index} className="flex gap-6">
+                <div className="flex flex-col gap-8 justify-center">
+                    <Image src={item.url1} alt='service photo' className="h-[160px] w-[160px]"/>
+                    <Image src={item.url2} alt='service photo' className="h-[160px] w-[160px]"/>
+                </div>
+                <div>
+                    <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
+                    <p className="w-100  text-[#0000009c]">{item.desc}</p>
+                    <div className="flex gap-14 mb-10">
+                            <ul className="list-disc list-inside mt-4 flex flex-col gap-3 ul-ser">
+                                {item.list1.map((listItem, idx) => (
+                                    <li key={idx} className="text-[#000] font-medium">{listItem}</li>
+                                ))}
+                            </ul>
+                            <ul className="list-disc list-inside mt-4 flex flex-col gap-3 ul-ser">
+                                {item.list2.map((listItem, idx) => (
+                                    <li key={idx} className="text-[#000]">{listItem}</li>
+                                ))}
+                            </ul>
+                    </div>
+                    <Btn text="READ MORE" bg="#ffd76e"/>
+                </div>
+            </div>
+        )
+    }
+})
+
+
     return (
-        <div>Services</div>
+        <section className="bg-[#eee] py-16">
+            <div className="w-fit mx-auto mb-6">
+                <SpecialHead text="OUR SERVICES"/>
+            </div>
+            <div className="text-center w-150 mx-auto mb-14">
+                <h2 className="text-4xl font-bold mb-4">Solutions We Provide</h2>
+                <p className="text-sm text-[#010101a5]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus voluptate libero ipsum nemo voluptatem.</p>
+            </div>
+            <div className="collect bg-[#eee] flex gap-10">
+                <div className="flex flex-col items-center justify-center gap-6 btn-groub">
+                    <div className="text-[black] bg-white  w-70 cursor-pointer text-center flex  items-center">
+                        <span className="bg-[#ffd76e] active text-black p-6 mr-6"><FontAwesomeIcon icon={faIgloo} className="text-3xl"/></span>
+                        <span className=" text-sm font-extralight ">CONSTRUCTION</span>
+                    </div>
+                    <div className="text-[black] bg-white  w-70 cursor-pointer text-center flex  items-center">
+                        <span className="bg-[#ffd76e] text-black p-6 mr-6"><FontAwesomeIcon icon={faPaintRoller} className="text-3xl"/></span>
+                        <span className=" text-sm font-extralight ">RENOVATION</span>
+                    </div>
+                    <div className="text-[black] bg-white  w-70 cursor-pointer text-center flex  items-center">
+                        <span className="bg-[#ffd76e] text-black p-6 mr-6"><FontAwesomeIcon icon={faWrench} className="text-3xl"/></span>
+                        <span className=" text-sm font-extralight ">RESTORATION</span>
+                    </div>
+                    <div className="text-[black] bg-white  w-70 cursor-pointer text-center flex  items-center">
+                        <span className="bg-[#ffd76e] text-black p-6 mr-6"><FontAwesomeIcon icon={faUserGear} className="text-3xl"/></span>
+                        <span className=" text-sm font-extralight ">CONSULTING</span>
+                    </div>
+                </div>
+                <div className="bg-white p-6 w-1/1 ">{dataList}</div>
+            </div>
+        </section>
     )
 }
 

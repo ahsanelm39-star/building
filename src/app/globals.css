@@ -197,3 +197,20 @@ html{
 .h1{
   line-height: 1.2;
 } 
+
+.active{
+  background-color: black;
+  color: white;
+}
+.ul-ser li{
+  position: relative;
+}
+.ul-ser li::before{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #ffd76e;
+  top: 10px;
+  left: -0px;
+}
