@@ -188,14 +188,7 @@ html{
   display: none;
 }
 }
-.menuo{
-  opacity: 1 !important;
-  transform: translatex(-100%);
-  -webkit-transform: translatex(-100%);
-  -moz-transform: translatex(-100%);
-  -ms-transform: translatex(-100%);
-  -o-transform: translatex(-100%);
-}
+
 .hero{
   background-image: url(../../public/images/img/hero/bg.jpg);
   background-repeat: no-repeat;
