@@ -6,7 +6,7 @@ const H1 = () => {
     useEffect(()=>{
         const el = document.querySelector(".h1") as HTMLElement
         el.style.transform = 'translatey(0)'
-        el.style.opacity = '1.5'
+        el.style.opacity = '1'
         window.addEventListener("scroll",()=>{
             const aboutSection = document.querySelector(".about-section") as HTMLElement
             const stateSection = document.querySelector(".state-section") as HTMLElement
@@ -42,7 +42,7 @@ const H1 = () => {
 
 
     return (
-        <h1 className="font-bold h1 uppercase text-5xl text-white tracking-tight mb-4 max-md:text-4xl h-t transition-all duration-400"> <span className="text-[#ffc221]">building</span> robust lasting solutions.</h1>
+        <h1 className="font-bold h1 uppercase text-5xl text-white tracking-tight mb-4 max-md:text-4xl h-t transition-all duration-600"> <span className="text-[#ffc221]">building</span> robust lasting solutions.</h1>
 
     )
 }
