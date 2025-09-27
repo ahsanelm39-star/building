@@ -188,6 +188,21 @@ html{
   display: none;
 }
 }
+ 
+.menuo{
+  transform: translatex(100%);
+  -webkit-transform: translatex(100%);
+  -moz-transform: translatex(100%);
+  -ms-transform: translatex(100%);
+  -o-transform: translatex(100%);
+}
+.menuo-back{
+  transform: translatex(0)!important;
+  -webkit-transform: translatex(0)!important;
+  -moz-transform: translatex(0)!important;
+  -ms-transform: translatex(0)!important;
+  -o-transform: translatex(0)!important;
+}
 
 .hero{
   background-image: url(../../public/images/img/hero/bg.jpg);
@@ -299,4 +314,35 @@ html{
   font-size: 15px;
   line-height: 1.7;
   bottom: 10px;
+}
+
+.h-t{
+  transform: translatey(50px);
+  -webkit-transform: translatey(50px);
+  -moz-transform: translatey(50px);
+  -ms-transform: translatey(50px);
+  -o-transform: translatey(50px);
+  opacity: 0;
+}
+.about-section,.state-section,.services-section,.projects-section,.testmonial-section,.fqa-section,.contact-section{
+  transition: 1.2s;
+  -webkit-transition: 1.2s;
+  -moz-transition: 1.2s;
+  -ms-transition: 1.2s;
+  -o-transition: 1.2s;
+  transform: translatey(100px);
+  -webkit-transform: translatey(100px);
+  -moz-transform: translatey(100px);
+  -ms-transform: translatey(100px);
+  -o-transform: translatey(100px);
+  opacity: 0;
+}
+
+.move-section{
+  opacity: 1;
+  transform: translatey(0);
+  -webkit-transform: translatey(0);
+  -moz-transform: translatey(0);
+  -ms-transform: translatey(0);
+  -o-transform: translatey(0);
 }

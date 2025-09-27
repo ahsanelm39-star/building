@@ -6,7 +6,7 @@ import { faFacebookF, faInstagram, faXTwitter, faYoutube } from "@fortawesome/fr
 const Contact = () => {
     return (
         <section className="py-10" id="contact">
-            <div className="collect p-10 border-t-4 border-[#ffd76e] flex gap-10 max-lg:gap-14 shadow-xl max-lg:flex-col">
+            <div className="collect p-10 border-t-4 border-[#ffd76e] flex gap-10 max-lg:gap-14 shadow-xl max-lg:flex-col contact-section">
                 <div className="px-10 max-xl:px-4 min-lg:border-r-2 max-lg:border-b-2 border-[#e5e5e5]">
                     <div className="mb-6 min-lg:w-100 max-lg:w-1/1 max-lg:text-center">
                         <h3 className="text-2xl font-bold mb-6">Contact Us</h3>

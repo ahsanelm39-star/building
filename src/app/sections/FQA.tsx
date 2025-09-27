@@ -34,7 +34,7 @@ const dataList = data.map((fqa,index)=>{
 })
 
     return (
-        <section className="py-14 ">
+        <section className="py-14 fqa-section">
             <div className="w-fit mx-auto">
                 <SpecialHead text="OUR SERVICES"/>
             </div>

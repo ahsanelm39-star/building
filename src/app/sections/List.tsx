@@ -16,30 +16,36 @@ const menuItems = [
 ];
 
 const List = () => {
-  const [showMenu, setShowMenu] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
   function showMenuo() {
-    setShowMenu(true);
+    const menuo = document.querySelector(".menuo") as HTMLElement
+    menuo.classList.add("menuo-back")
   }
 
   useEffect(()=>{
     window.addEventListener("click",(e)=>{
       if (e.target instanceof Element) {
         if(e.target.classList.contains("menuo")){
-          setShowMenu(false)
+          e.target.classList.remove("menuo-back")
         }
       }
     })
   },[])
 
+  function remove() {
+    const menuo = document.querySelector(".menuo") as HTMLElement
+    menuo.classList.remove("menuo-back")
+  }
+
   function Menuo() {
 
-    if (!showMenu) return null;
-    return (
-      <div className="md:hidden fixed bg-[#0000005d] w-full h-[100vh] top-0 right-0 flex justify-end z-50 menuo">
+      return (
+      <div className={`md:hidden fixed bg-[#0000005d] w-full h-[100vh] top-0 
+      right-0 flex justify-end z-50 menuo transition-all duration-300 `}>
+
         <div className=' bg-black h-[100vh] w-[250px] flex flex-col justify-evenly px-8'>
-          <span onClick={() => setShowMenu(false)} className='text-2xl text-white font-medium cursor-pointer absolute top-6 right-6 transition-all hover:text-red-500'>X</span>
+          <span onClick={remove} className='text-2xl text-white font-medium cursor-pointer absolute top-6 right-6 transition-all hover:text-red-500'>X</span>
           <div>
             <Link href={'#hero'}>
               <Image src={MopileLogo} alt='logo' />
@@ -47,7 +53,7 @@ const List = () => {
           </div>
           <ul className='flex flex-col gap-6 text-white items-center list-ul'>
             {menuItems.map((item, idx) => (
-              <Link href={item.href} key={item.label} onClick={() => { setActiveIndex(idx); setShowMenu(false); }}>
+              <Link href={item.href} key={item.label} onClick={() => { setActiveIndex(idx); }}>
                 <li className={`cursor-pointer transition-all hover:text-[#ffd76e] ${activeIndex === idx ? "on" : ""}`}>
                   {item.label}
                 </li>
@@ -63,7 +69,7 @@ const List = () => {
         </div>
       </div>
     )
-  }
+    }
 
   return (
     <>

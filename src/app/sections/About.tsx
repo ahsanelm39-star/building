@@ -8,7 +8,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <section className="py-20" id="about">
-        <div className="collect flex justify-between max-md:flex-col max-md:items-center gap-10">
+        <div className="collect flex justify-between max-md:flex-col max-md:items-center gap-10 about-section">
                 <div className="w-120 max-md:w-1/1 max-md:text-center">
                     <SpecialHead text={'ABOUT US'}/>
                     <h2 className="text-3xl md:text-4xl font-bold mt-4 max-md:text-3xl">Focused On Excellence In Every Project</h2>

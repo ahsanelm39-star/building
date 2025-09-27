@@ -23,7 +23,7 @@ import {
 
 const Testmonials = () => {
     return (
-        <section className="py-14 max-sm:pb-80">
+        <section className="py-14 max-sm:pb-80 testmonial-section">
             <div className="collect flex justify-between max-lg:flex-col max-lg:gap-10">
                 <div className="w-1/1 md:w-[600px] max-lg:mx-auto max-lg:text-center">
                         <div className="max-lg:flex max-lg:justify-center">
