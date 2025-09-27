@@ -3,10 +3,11 @@ import Image from 'next/image'
 import AboutSmole from '../../../public/images/img/about/signature.svg'
 import AboutBig from '../../../public/images/img/about/img.jpg'
 import SpecialHead from "./SpecialHead"
+import Link from "next/link";
 
 const About = () => {
   return (
-    <section className="py-16">
+    <section className="py-20" id="about">
         <div className="collect flex justify-between max-md:flex-col max-md:items-center gap-10">
                 <div className="w-120 max-md:w-1/1 max-md:text-center">
                     <SpecialHead text={'ABOUT US'}/>
@@ -17,7 +18,9 @@ const About = () => {
                         <Image src={AboutSmole} alt ="signature" className="max-sm:w-35 "/>
                         <span className="text-sm text-[#000000b0] float-right">Company CEO</span>
                     </div>
-                    <Btn bg={'#ffc221'} text={'CONTACT US'}/>
+                    <Link href={'#contact'}>
+                      <Btn bg={'#ffc221'} text={'CONTACT US'}/>
+                    </Link>
                 </div>
                 <div className=" relative h-fit w-fit">
                     <span className=" absolute -top-4 -left-4 bg-[#ffd76e] w-1/1 h-1/1"></span>

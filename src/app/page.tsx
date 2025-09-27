@@ -1,5 +1,8 @@
 // commponents
+
 import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 import FQA from "./sections/FQA";
 import GoUp from "./sections/GoUp";
 import Header from "./sections/Header";
@@ -21,6 +24,8 @@ const Home = () => {
       <Work />
       <Testmonials />
       <FQA />
+      <Contact />
+      <Footer />
     </div>
   );
 };

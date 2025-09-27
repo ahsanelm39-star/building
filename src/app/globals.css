@@ -169,7 +169,7 @@ html{
 .on{
   color: #ffd76e;
 }
-.get-box:hover .icon{
+.get-box:hover .icon , .arrwo-box:hover .icon{
   transform: rotate(40deg);
   -webkit-transform: rotate(40deg);
   -moz-transform: rotate(40deg);
@@ -234,11 +234,6 @@ html{
   bottom: 30px;
 }
 
-/* @media (max-width:768px){
-    .work-section div .card{
-    bottom: 30px;
-  }
-} */
 
 .p{
   line-height: 1.8;
@@ -310,5 +305,5 @@ html{
   color: rgba(0, 0, 0, 0.637);
   font-size: 15px;
   line-height: 1.7;
-  bottom: 20px;
+  bottom: 10px;
 }

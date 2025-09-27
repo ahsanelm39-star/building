@@ -107,7 +107,7 @@ const dataList = data.map((item, index) => {
 
 
     return (
-        <section className="bg-[#eee] py-16">
+        <section className="bg-[#eee] py-16" id="services">
             <div className="w-fit mx-auto mb-6">
                 <SpecialHead text="OUR SERVICES"/>
             </div>

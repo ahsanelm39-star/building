@@ -27,7 +27,7 @@ const dataList = data.map((fqa,index)=>{
         <div key={index} className="w-1/1 border-b font-bold text-2xl py-4 text-primary">
             <div className="fqa flex justify-between select-none items-center gap-4">
                 <p>{fqa}</p>
-                <div className="bg-[#ffd76e] py-1 px-2 h-fit"><FontAwesomeIcon icon={faPlus}  className=" text-lg  cursor-pointer transition-all"/></div>
+                <div className="bg-[#ffd76e] py-1 px-2 h-fit  cursor-pointer "><FontAwesomeIcon icon={faPlus}  className=" text-lg transition-all"/></div>
             </div>
         </div>
     )

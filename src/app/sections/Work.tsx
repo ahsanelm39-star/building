@@ -52,7 +52,7 @@ const Work = () => {
 
 
     return (
-        <section className="py-14">
+        <section className="py-14" id="projects">
                 <div className="w-fit mx-auto mb-6">
                     <SpecialHead text="OUR WORK"/>
                 </div>

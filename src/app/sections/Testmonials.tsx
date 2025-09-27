@@ -4,6 +4,7 @@ import Image from "next/image"
 import TestImg from '../../../public/images/img/testimonials/img.jpg'
 import TestAvatar from '../../../public/images/img/testimonials/avatar.jpg'
 import TestQuote from '../../../public/images/img/testimonials/quote.svg'
+import Link from "next/link"
 ///////
 
 
@@ -30,7 +31,9 @@ const Testmonials = () => {
                         </div>
                     <h2 className="text-3xl md:text-4xl font-bold my-4">Build On Trust Proven By Results</h2>
                     <p className="text-sm text-[#000000af] mb-6 p max-lg:text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores minima aspernatur illum et fugiat vitae obcaecati dolor recusandae tempora nihil, impedit nam, soluta voluptas natus dolorum dolorem voluptates ea magni.</p>
-                    <Btn text={'WORK WITH US'} bg={'#ffc221'}/>
+                    <Link href={'#contact'}>
+                        <Btn text={'WORK WITH US'} bg={'#ffc221'}/>
+                    </Link>
                 </div>
                 <div className=" relative">
                     <div className="w-[500px] max-sm:w-1/1 h-[200px] absolute p-12 max-sm:p-0 bg-white shadow-xl  -bottom-6 -left-[60%] max-lg:-bottom-10 max-lg:left-[50%] max-lg:-translate-x-[50%] max-sm:-bottom-60 border border-[#eee] flex justify-center items-center ">

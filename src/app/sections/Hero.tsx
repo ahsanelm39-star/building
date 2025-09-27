@@ -1,5 +1,6 @@
+import Link from "next/link";
 import Btn from "./Btn"
-
+// import { motion } from "motion/react"
 
 const Hero = () => {
   return (
@@ -9,7 +10,9 @@ const Hero = () => {
                 <h1 className="font-bold h1 uppercase text-5xl text-white tracking-tight mb-4 max-md:text-4xl"> <span className="text-[#ffc221]">building</span> robust lasting solutions.</h1>
                 <p className="text-md text-[#ffffffa2] font-bold tracking-tight">From concept to completion, we ensure every details is optimized for strength and endurance, creating solution that inspire confidence and stand firm for years</p>
             </div>
-            <Btn bg={'#ffc221'} text={"SEE OUR WORK"} />
+            <Link href={"#projects"}>
+              <Btn bg={'#ffc221'} text={"SEE OUR WORK"} />
+            </Link>
         </div>
     </section>
   )
