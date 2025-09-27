@@ -26,7 +26,9 @@ const Nave = () => {
         <nav className='bg-primary '>
             <div className="collect  flex justify-between items-center py-3">
                 <div>
-                    <Image src={Logo} alt="Logo"  height={48} width={230} className='max-md:w-50 mr-8'/>
+                    <Link href={'#hero'}>
+                        <Image src={Logo} alt="Logo"  height={48} width={230} className='max-md:w-50 mr-8'/>
+                    </Link>
                 </div>
                 <div className='flex gap-10'>
                     <ul className='flex text-white items-center max-md:hidden ml-9 ul'>
