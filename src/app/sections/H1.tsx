@@ -3,8 +3,6 @@
 import { useEffect } from "react"
 
 const H1 = () => {
-
-
     useEffect(()=>{
         const el = document.querySelector(".h1") as HTMLElement
         el.style.transform = 'translatey(0)'
