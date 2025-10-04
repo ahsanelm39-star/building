@@ -7,7 +7,7 @@ const H1 = () => {
         const el = document.querySelector(".h1") as HTMLElement
         el.style.transform = 'translatey(0)'
         el.style.opacity = '1'
-        window.addEventListener("scroll",()=>{
+        function sectionScroll () {
             const aboutSection = document.querySelector(".about-section") as HTMLElement
             const stateSection = document.querySelector(".state-section") as HTMLElement
             const servicesSection= document.querySelector(".services-section") as HTMLElement
@@ -36,7 +36,11 @@ const H1 = () => {
             if(scrollY > contactSection.offsetTop - 400){
                 contactSection.classList.add("move-section")
             }
-        })
+        }
+        window.addEventListener("scroll",sectionScroll)
+        return ()=>{
+            window.removeEventListener("scroll", sectionScroll)
+        }
     },[])
 
 
